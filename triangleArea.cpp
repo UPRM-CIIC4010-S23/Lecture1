@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 double getArea(double s1, double s2, double s3) {
 
     double s = (s1 + s2 + s3) / 2.0;
@@ -9,6 +11,14 @@ double getArea(double s1, double s2, double s3) {
     return area;
 
 }
+
+bool largerThan(double t1s1, double t1s2, double t1s3,
+                double t2s1, double t2s2, double t2s3) {
+
+    return (getArea(t1s1,t1s2,t1s3) > getArea(t2s1,t2s2,t2s3));
+}
+
+
 
 double getAngle1(double s1, double s2, double s3) {
 
