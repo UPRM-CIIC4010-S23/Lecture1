@@ -1,6 +1,6 @@
 #include <cmath>
 #include <iostream>
-#include "Triangle.h"
+#include "include/Triangle.h"
 
 using namespace std;
 
@@ -106,7 +106,10 @@ string removeNonAlpha(string s) {
 
 int main() {
 
-    cout << "Area is: " << getArea(10.0, 10.0, 10.0) << endl;
+    Triangle t(10,10,10);
+
+    cout << "Area is: " << t.getArea() << endl;
+    
     cout << "Area is: " << getArea(10, 20, 30) << endl;
     cout << "Area is: " << getArea(40,30,30) << endl;
 
