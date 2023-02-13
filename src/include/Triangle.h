@@ -11,6 +11,13 @@
         side3 = s3;
     }
 
+    // Instance methods
     double getArea();
+    bool largerThan(Triangle t2);
+    double getAngle1();
+    
+    // Static methods
+    static double sumAreas(Triangle triangles[], int size);
+    static Triangle getLargest(Triangle triangles[], int size);
 
  };
