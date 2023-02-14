@@ -28,9 +28,14 @@ int main() {
     cout << "Angle 1 is: " << 180 * (Triangle(5,4,3).getAngle1() / M_PI) << endl;
 
     Triangle t2(10,10,10);
-    cout << "Perimeter is: " << t2.side1 + t2.side2 + t2.side3 << endl;
+    cout << "Perimeter is: " << t2.getSide1() + t2.getSide2() + t2.getSide3() << endl;
 
     cout << "Stripped string is: " << removeNonAlpha("B_i-e0n7v?en^$ido") << endl;
+
+    Triangle tSmall(10,10,10);
+    Triangle tLarge(20,20,20);
+
+    cout << "tSmall largetThan tLarge: " << tSmall.largerThan(tLarge) << endl;
 
     return 0;
 }

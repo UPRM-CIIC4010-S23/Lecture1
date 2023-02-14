@@ -3,8 +3,8 @@
 
 double Triangle::getArea() {
 
-    double s = (this->side1 + this->side2 + this->side3) / 2.0;
-    double area = sqrt(s * (s - this->side1) * (s - this->side2) * (s - this->side3));
+    double s = (this->getSide1() + this->getSide2() + this->getSide3()) / 2.0;
+    double area = sqrt(s * (s - this->getSide1()) * (s - this->getSide2()) * (s - this->getSide3()));
     return area;
 
 }
@@ -17,7 +17,7 @@ bool Triangle::largerThan(Triangle t2) {
 
 double Triangle::getAngle1() {
 
-    double cosine = (this->side1 * this->side1 - this->side2 * this->side2 - this->side3 * this->side3) / (-2 * this->side2 * this->side3);
+    double cosine = (this->getSide1() * this->getSide1() - this->getSide2() * this->getSide2() - this->getSide3() * this->getSide3()) / (-2 * this->getSide2() * this->getSide3());
     double angle = acos(cosine);
     return angle;
 
