@@ -1,8 +1,12 @@
+ #pragma once
+ #include <vector>
+
+ using namespace std;
+ 
  class Triangle {
 
     private:
     double sides[3];
-    int color;
     // double side1;
     // double side2;
     // double side3;
@@ -32,7 +36,8 @@
     double getAngle1();
     
     // Static methods
-    static double sumAreas(Triangle triangles[], int size);
+    static double sumAreas(vector<Triangle> triangles);
     static Triangle getLargest(Triangle triangles[], int size);
+    static void scaleSides(vector<Triangle> &triangles,double factor);
 
  };

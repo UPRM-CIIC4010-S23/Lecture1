@@ -37,5 +37,16 @@ int main() {
 
     cout << "tSmall largetThan tLarge: " << tSmall.largerThan(tLarge) << endl;
 
+    cout << "tSmall largetThan tLarge: " << Triangle(10,10,10).largerThan(Triangle(20,20,20)) << endl;
+
+
+    vector<Triangle> triangleVector { Triangle(10,10,10), Triangle(20,20,20),Triangle(30,30,30)};
+
+    cout << "Sum of Areas is: " << Triangle::sumAreas(triangleVector) << endl;
+
+    cout << "Sum of Areas is: " << Triangle::sumAreas(triangleVector) << endl;
+
+    Triangle::scaleSides(triangleVector,2);
+
     return 0;
 }

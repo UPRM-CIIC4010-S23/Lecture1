@@ -23,9 +23,9 @@ double Triangle::getAngle1() {
 
 }
 
-double Triangle::sumAreas(Triangle triangles[], int size) {
+double Triangle::sumAreas(vector<Triangle> triangles) {
     double areaTotal = 0;
-    for (int i=0; i<size; i++) {
+    for (int i=0; i<triangles.size(); i++) {
         areaTotal += triangles[i].getArea();
     }
     return areaTotal;
@@ -44,5 +44,13 @@ Triangle Triangle::getLargest(Triangle triangles[], int size) {
         }
     }
     return largestTriangle;
+
+}
+
+void Triangle::scaleSides(vector<Triangle> &triangles, double factor) {
+
+    for (int i=0; i<triangles.size();i++) {
+        triangles[i].setSides(triangles[i].getSide1()*factor, triangles[i].getSide2()*factor,triangles[i].getSide3()*factor);
+    }
 
 }
