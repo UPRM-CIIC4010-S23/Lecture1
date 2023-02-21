@@ -1,7 +1,7 @@
 #include <cmath>
 #include "include/Triangle.h"
 
-double Triangle::getArea() {
+double Triangle::getArea() const {
 
     double s = (this->getSide1() + this->getSide2() + this->getSide3()) / 2.0;
     double area = sqrt(s * (s - this->getSide1()) * (s - this->getSide2()) * (s - this->getSide3()));
@@ -23,7 +23,7 @@ double Triangle::getAngle1() {
 
 }
 
-double Triangle::sumAreas(vector<Triangle> triangles) {
+double Triangle::sumAreas(const vector<Triangle> &triangles) {
     double areaTotal = 0;
     for (int i=0; i<triangles.size(); i++) {
         areaTotal += triangles[i].getArea();
@@ -52,5 +52,11 @@ void Triangle::scaleSides(vector<Triangle> &triangles, double factor) {
     for (int i=0; i<triangles.size();i++) {
         triangles[i].setSides(triangles[i].getSide1()*factor, triangles[i].getSide2()*factor,triangles[i].getSide3()*factor);
     }
+
+}
+
+void Triangle::scaleSides(vector<Triangle> &triangles) {
+
+    Triangle::scaleSides(triangles,2);
 
 }

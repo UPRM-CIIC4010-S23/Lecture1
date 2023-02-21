@@ -19,9 +19,9 @@
     }
 
     //Getters
-    double getSide1() { return sides[0]; }
-    double getSide2() { return sides[1]; }
-    double getSide3() { return sides[2]; }
+    double getSide1() const { return sides[0]; }
+    double getSide2() const { return sides[1]; }
+    double getSide3() const { return sides[2]; }
 
     //Setters
     void setSides(double s1, double s2, double s3) { 
@@ -31,13 +31,14 @@
     }
 
     // Instance methods
-    double getArea();
+    double getArea() const;
     bool largerThan(Triangle t2);
     double getAngle1();
     
     // Static methods
-    static double sumAreas(vector<Triangle> triangles);
+    static double sumAreas(const vector<Triangle> &triangles);
     static Triangle getLargest(Triangle triangles[], int size);
     static void scaleSides(vector<Triangle> &triangles,double factor);
+    static void scaleSides(vector<Triangle> &triangles);
 
  };

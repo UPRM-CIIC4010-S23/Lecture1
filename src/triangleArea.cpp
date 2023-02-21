@@ -1,5 +1,6 @@
 #include <cmath>
 #include <iostream>
+#include <vector>
 #include "include/Triangle.h"
 
 using namespace std;
@@ -42,7 +43,7 @@ int main() {
 
     vector<Triangle> triangleVector { Triangle(10,10,10), Triangle(20,20,20),Triangle(30,30,30)};
 
-    cout << "Sum of Areas is: " << Triangle::sumAreas(triangleVector) << endl;
+    cout << "Sum of Areas is: " << Triangle::sumAreas(vector<Triangle> {Triangle(10,10,10)}) << endl;
 
     cout << "Sum of Areas is: " << Triangle::sumAreas(triangleVector) << endl;
 
